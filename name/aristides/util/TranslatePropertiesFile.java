@@ -138,7 +138,7 @@ public class TranslatePropertiesFile {
 		ArrayList<String> keys = translatedFile.propertyNames();
 		while( !keys.isEmpty() || ! comments.isEmpty()){
 			
-			if(writedLines == (comments.get(0).getLineNumber())){
+			if( !comments.isEmpty() &&  writedLines == (comments.get(0).getLineNumber())){
 				linesToWrite.add(comments.get(0).getText());
 				comments.remove(0);
 				writeKey = false;
